@@ -5,7 +5,7 @@
 [image1]: ./assets/project_video.gif "Final Output"
 [image2]: ./assets/calibration.png "Process of camera calibration."
 [image3]: ./assets/undistorted.png "Original and Undistorted Images."
-[image4]: ./assets/
+[image4]: ./assets/warped.png "Warped and Unwarped Images."
 [image5]: ./assets/
 [image6]: ./assets/
 [image7]: ./assets/
