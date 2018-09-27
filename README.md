@@ -57,6 +57,8 @@ The code below outputs source and destination points.
                           [offset, h], 
                           [w - offset, h]])
  ```
+The figure below shows warped and unwarped images.
+![alt text][image4]
 
 #### 1. Provide an example of a distortion-corrected image.
 
