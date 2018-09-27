@@ -1,4 +1,4 @@
-**Advanced Lane Finding Project**
+## Advanced Lane Finding Project
 
 
 
@@ -27,16 +27,36 @@ The goals / steps of this project are the following:
 
 ### Camera Calibration and Lens Distortion Correction
 
+For camera calibration and lens distortion correction I created a class called Camera
  - `camera = Camera(directory = 'camera_cal/')`initializes the Camera object with the calibration image files
  - `camera.calibrate()` This method uses the loaded images and computes `mtx`- the camera matrix and `dist`- the distortion coefficients using  `cv2.calibrateCamera()`. This requires `objpoints` and `imgpoints` which are computed using `cv2.findChessboardCorners`. `mtx` and `dist` are made into a dictionary and saved as a pickle object `camera_calib.p`.
  - `camera.getCalibration()` method loads the calibration file.
  - `camera.undistort()` is used for correcting the lens distortion in an image.
  
- The image below shows the process of calibration with original and undistorted images.
+ The images below shows the process of calibration with original and undistorted images.
  ![alt text][image2]
  ![alt text][image3]
 
-### Pipeline (single images)
+### Perspective Transform
+
+For obtaining a perspective transform of an image I created the class Transform
+- The `getPoints()` method yields source and destination points for the given image.
+- `getPerspectiveTransform()` and `getInversePerspectiveTransform()` yields warped and unwarped images respectively.
+
+The code below outputs source and destination points.
+
+```python
+        offset = 75
+        src_pts = np.float32([[w // 2 - offset, h* 0.625], 
+                          [w // 2 + offset, h * 0.625], 
+                          [offset, h], 
+                          [w - offset, h]])
+
+        dst_pts = np.float32([[offset, 0], 
+                          [w - offset, 0], 
+                          [offset, h], 
+                          [w - offset, h]])
+ ```
 
 #### 1. Provide an example of a distortion-corrected image.
 
