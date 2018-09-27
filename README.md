@@ -6,7 +6,7 @@
 [image2]: ./assets/calibration.png "Process of camera calibration."
 [image3]: ./assets/undistorted.png "Original and Undistorted Images."
 [image4]: ./assets/warped.png "Warped and Unwarped Images."
-[image5]: ./assets/thresholdpng "Combined gradient and color threshold."
+[image5]: ./assets/threshold.png "Combined gradient and color threshold."
 [image6]: ./assets/
 [image7]: ./assets/
 
