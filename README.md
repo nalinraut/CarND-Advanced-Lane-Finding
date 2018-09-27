@@ -1,5 +1,6 @@
 **Advanced Lane Finding Project**
-[//]: # (Image References)
+
+[//]: #(Image References)
 
 [image1]: ./assets/project_video.gif "Final Output"
 [image2]: ./test_images/test1.jpg "Road Transformed"
