@@ -6,7 +6,7 @@
 [image2]: ./assets/calibration.png "Process of camera calibration."
 [image3]: ./assets/undistorted.png "Original and Undistorted Images."
 [image4]: ./assets/warped.png "Warped and Unwarped Images."
-[image5]: ./assets/
+[image5]: ./assets/thresholdpng "Combined gradient and color threshold."
 [image6]: ./assets/
 [image7]: ./assets/
 
@@ -59,6 +59,14 @@ The code below outputs source and destination points.
  ```
 The figure below shows warped and unwarped images.
 ![alt text][image4]
+
+### Combined gradient and color thresholds
+
+I created the Threshold class for applying combined gradient and color thresholds.
+The image is converted into HSL space to identify the yellow and white portions since lanes fall into the same color spectrum (Lanes are either white or yellow in color)
+In addition to the HSL space, Sobel filter in 'x' direction is applied to image since the filter in 'x' direction detects edges close to horizontal. 
+The figure below shows images with gradient and color thresholds in a combination. 
+![alt text][image5]
 
 #### 1. Provide an example of a distortion-corrected image.
 
