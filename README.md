@@ -7,8 +7,11 @@
 [image3]: ./assets/undistorted.png "Original and Undistorted Images."
 [image4]: ./assets/warped.png "Warped and Unwarped Images."
 [image5]: ./assets/threshold.png "Combined gradient and color threshold."
-[image6]: ./assets/
-[image7]: ./assets/
+[image6]: ./assets/histogram.png "Histogram"
+[image7]: ./assets/windows.png "Sliding Window"
+[image8]: ./assets/lane.png "Lane"
+
+[image9]: ./assets/curve.png "Curve"
 
 
 ![alt text][image1]
@@ -71,23 +74,31 @@ The figure below shows images with gradient and color thresholds in a combinatio
 
 ### Identifying lane line pixel points
 
+To identify the lane pixels, first we compute the histogram so we know where the lane lines originate and follow them or trace them using sliding windows. I used the sliding window approach to compute the first set of curves and then just used the previous curve parameters to detect new curves.
+The figure below shows a histogram with two peaks where the lane lines originate. 
+![alt text][image6]
 
+Below is the image showing sliding windows. The sliding windows finds pixel points foe lane lines and fits a polygon.
+![alt text][image7]
 
+The figure below shows poynomilas fit to the pixel points. The lane line in the next frames except for the first one are depicted using the polynomals on the first frame. Also, the lane is sketchedout between the left and right lane lines.
+![alt text][image8]
 
+### Radius of Curvature
 
+To find the radius of curvature I use the following equations
 
+![alt text][image9]
 ---
 
-### Pipeline (video)
+### Video
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+#### Link to the video
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./project_video_output.mp4)
 
 ---
 
 ### Discussion
-
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
