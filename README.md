@@ -11,7 +11,11 @@
 [image7]: ./assets/windows.png "Sliding Window"
 [image8]: ./assets/lane.png "Lane"
 
-[image9]: ./assets/curve.png "Curve"
+[image9]: ./assets/curve.png "curve"
+
+[image10]: ./assets/test2.png "test"
+[image11]: ./assets/test3.png "test"
+[image12]: ./assets/test3.png "test"
 
 
 ![alt text][image1]
@@ -97,8 +101,17 @@ To find the radius of curvature I use the following equations
 
 Here's a [link to my video result](./project_video_output.mp4)
 
+
+
+### Examples
+![alt text][image10]
+
+![alt text][image11]
+
+![alt text][image12]
+
 ---
 
 ### Discussion
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The method is slow and not robust. Semantic segmentation techniques can be used to identify drivable areas and lane lines. 
